@@ -1,5 +1,7 @@
-+++ categories = ["About"] comments = false draft = false slug = "" tags = ["about"] title = "About"
-
++++
+title = 'My Second Post'
+draft = false
++++
 
 
 Blablabla
