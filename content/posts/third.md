@@ -1,8 +1,8 @@
 +++
-title : 'My Third Post: We Demonstrate Images'
-draft : false
-tags: [Space]
-summary: 'Ceci est un résumé 3 personnalisé pour l'article.'
+title = 'My Third Post: We Demonstrate Images'
+draft = false
+tags = [Space]
+summary = 'Ceci est un résumé 3 personnalisé pour l'article.'
 +++
 
 # Reflecting on Carl Sagan's Pale Blue Dot
