@@ -6,10 +6,9 @@ copyright = "© Kite"
 pygmentsstyle = "monokai"
 pygmentscodefences = true
 pygmentscodefencesguesssyntax = true
-paginate = 4
 
 [params]
-favicon = "https://img.icons8.com/officel/16/000000/chevron-right.png"
+favicon = "https://example.com/path/to/your/cyber-security-icon.png"
 og_image = "https://raw.githubusercontent.com/athul/archie/master/images/archie-dark.png"
 mode = "toggle"
 useCDN = true

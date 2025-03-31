@@ -1,6 +1,6 @@
 +++
-title = 'My Second Post'
-draft = false
+title : 'My Second Post'
+draft : false
 +++
 
 
