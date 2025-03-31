@@ -1,7 +1,7 @@
 +++
 title = 'My Second Post'
 draft = false
-tags = [sky]
+tags = ["Sky"]
 summary = 'Ceci est un résumé 2 personnalisé pour l'article.'
 +++
 

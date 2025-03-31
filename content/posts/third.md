@@ -1,7 +1,7 @@
 +++
 title = 'My Third Post: We Demonstrate Images'
 draft = false
-tags = [Space]
+tags = ["Space"]
 summary = 'Ceci est un résumé 3 personnalisé pour l'article.'
 +++
 
