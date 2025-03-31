@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Posts on My New Hugo Site</title>
+    <link>http://localhost:1313/posts/</link>
+    <description>Recent content in Posts on My New Hugo Site</description>
+    <generator>Hugo</generator>
+    <language>en-us</language>
+    <lastBuildDate>Mon, 31 Mar 2025 13:20:44 +0200</lastBuildDate>
+    <atom:link href="http://localhost:1313/posts/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>DevOps_Rex_CICD</title>
+      <link>http://localhost:1313/posts/devops_rex_cicd/</link>
+      <pubDate>Mon, 31 Mar 2025 13:20:44 +0200</pubDate>
+      <guid>http://localhost:1313/posts/devops_rex_cicd/</guid>
+      <description>&lt;p&gt;Hello World&lt;/p&gt;&#xA;&lt;hr&gt;&#xA;&lt;hr&gt;&#xA;&lt;p&gt;=================&lt;/p&gt;&#xA;&lt;h1 id=&#34;devops-rex&#34;&gt;DevOps REX&lt;/h1&gt;&#xA;&lt;p&gt;C&amp;rsquo;est une &lt;strong&gt;conf&lt;/strong&gt; française&lt;/p&gt;&#xA;&lt;h2 id=&#34;la-vidéo&#34;&gt;La vidéo&lt;/h2&gt;&#xA;&lt;p&gt;blabla&lt;/p&gt;&#xA;&lt;h2 id=&#34;le-contexte&#34;&gt;Le contexte&lt;/h2&gt;&#xA;&lt;p&gt;blabla&lt;/p&gt;</description>
+    </item>
+  </channel>
+</rss>
