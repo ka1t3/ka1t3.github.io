@@ -4,11 +4,6 @@ title = 'Kite - AA'
 theme="archie"
 copyright = "© Kite"
 
-[params]
-	mode="auto"
-	useCDN=false
-	subtitle = "Minimal and Clean [blog theme for Hugo](https://github.com/athul/archie)"
-
 [[params.social]]
 name = "GitHub"
 icon = "github"
