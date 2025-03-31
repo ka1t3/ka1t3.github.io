@@ -2,7 +2,6 @@
 title = 'My Third Post: We Demonstrate Images'
 draft = false
 tags = ["Space"]
-summary = 'Ceci est un résumé 3 personnalisé pour l\'article.'
 +++
 
 # Reflecting on Carl Sagan's Pale Blue Dot
@@ -10,6 +9,8 @@ summary = 'Ceci est un résumé 3 personnalisé pour l\'article.'
 ![Image of Space](https://images.unsplash.com/photo-1572442350603-6cf8355670dd?q=80&w=800&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D)
 
 _Photo by [JuniperPhoton]("https://unsplash.com/@juniperphoton?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash")_
+
+<!--more-->
 
 ## Introduction
 

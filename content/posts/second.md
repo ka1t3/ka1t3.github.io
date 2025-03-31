@@ -2,12 +2,13 @@
 title = 'My Second Post'
 draft = false
 tags = ["Sky"]
-summary = 'Ceci est un résumé 2 personnalisé pour l\'article.'
 +++
 
 ## Heading of the Post
 
 Start writing your content here. You can add more sections, images, links, and various formatting to enrich your post. Here are some ideas to get started:
+
+<!--more-->
 
 ### Subheading for a Section
 
