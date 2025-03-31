@@ -1,7 +1,9 @@
-+++
+---
 title = 'My Second Post'
 draft = false
-+++
+tags: [sky]
+summary: "Ceci est un résumé 2 personnalisé pour l'article."
+---
 
 ## Heading of the Post
 
