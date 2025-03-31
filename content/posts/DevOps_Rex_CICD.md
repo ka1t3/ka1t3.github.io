@@ -1,6 +1,6 @@
 +++
 date = '2025-03-31T13:20:44+02:00'
-draft = true
+draft = false
 title = 'DevOps_Rex_CICD'
 +++
 
