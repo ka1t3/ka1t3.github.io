@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html><head lang="en"><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script>
+	<meta charset="utf-8" />
+	<meta http-equiv="X-UA-Compatible" content="IE=edge"><title>Apply OWASP ASVS at scale - Kite - AA</title><link rel="icon" type="image/png" href=https://img.icons8.com/lollipop/48/cyber-security.png /><meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta name="description" content="The ASVS
+The ASVS is a framework that defines functional and non-functional security controls to be considered during the design, development, and testing phases of web applications and services. It presents itself as a system that is both demonstrable and reproducible for verifying the security level of an application. The latest officially published version is Release V4.0.3, dated October 2021, and spans 71 pages.
+
+A useful side note: A version 5.0 is expected in 2025, but I will discuss it further at the end of the article." />
+	<meta property="og:image" content="https://raw.githubusercontent.com/athul/archie/master/images/archie-dark.png"/>
+	<meta property="og:url" content="//localhost:1313/posts/apply-owasp-asvs-at-scale/">
+  <meta property="og:site_name" content="Kite - AA">
+  <meta property="og:title" content="Apply OWASP ASVS at scale">
+  <meta property="og:description" content="The ASVS The ASVS is a framework that defines functional and non-functional security controls to be considered during the design, development, and testing phases of web applications and services. It presents itself as a system that is both demonstrable and reproducible for verifying the security level of an application. The latest officially published version is Release V4.0.3, dated October 2021, and spans 71 pages.
+A useful side note: A version 5.0 is expected in 2025, but I will discuss it further at the end of the article.">
+  <meta property="og:locale" content="en_us">
+  <meta property="og:type" content="article">
+    <meta property="article:section" content="posts">
+    <meta property="article:published_time" content="2025-04-04T00:00:00+00:00">
+    <meta property="article:modified_time" content="2025-04-04T00:00:00+00:00">
+    <meta property="article:tag" content="OWASP">
+    <meta property="article:tag" content="Application Security">
+    <meta property="article:tag" content="ASVS">
+
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:title" content="Apply OWASP ASVS at scale">
+  <meta name="twitter:description" content="The ASVS The ASVS is a framework that defines functional and non-functional security controls to be considered during the design, development, and testing phases of web applications and services. It presents itself as a system that is both demonstrable and reproducible for verifying the security level of an application. The latest officially published version is Release V4.0.3, dated October 2021, and spans 71 pages.
+A useful side note: A version 5.0 is expected in 2025, but I will discuss it further at the end of the article.">
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:ital,wght@1,500&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css2?family=Fira+Sans&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css?family=Roboto+Mono" rel="stylesheet">
+
+	
+	<link rel="stylesheet" type="text/css" media="screen" href="//localhost:1313/css/main.e08e3d47ef734c0d298ed0fb46ed50640341570139eb362f34ac2720f01a4f58.css" />
+		<link id="darkModeStyle" rel="stylesheet" type="text/css" href="//localhost:1313/css/dark.a6ecc2a65313cfac5f20a92af993901cecda7fc68011af46a4c24abe67a922f7.css"  disabled />
+</head>
+<body>
+        <div class="content"><header>
+	<div class="main">
+		<a href="//localhost:1313/">Kite - AA</a>
+	</div>
+	<nav>
+		
+		<a href="/">Home</a>
+		
+		<a href="/posts">All posts</a>
+		
+		<a href="/about">About</a>
+		
+		<a href="/tags">Tags</a>
+		
+		| <span id="dark-mode-toggle" onclick="toggleTheme()"><svg class="feather">
+   <use href="https://unpkg.com/feather-icons@4.29.2/dist/feather-sprite.svg#sun" />
+</svg></span>
+		<script src="//localhost:1313/js/themetoggle.js"></script>
+		
+	</nav>
+</header>
+
+<main>
+  <article>
+    <div class="post-container">
+      
+      <div class="post-content">
+        <div class="title">
+          <h1 class="title">Apply OWASP ASVS at scale</h1>
+          <div class="meta">Posted on Apr 4, 2025</div>
+        </div>
+        
+        <section class="body">
+          <h2 id="the-asvs">The ASVS</h2>
+<p>The ASVS is a framework that defines functional and non-functional security controls to be considered during the design, development, and testing phases of web applications and services. It presents itself as a system that is both demonstrable and reproducible for verifying the security level of an application. The latest officially published version is Release V4.0.3, dated October 2021, and spans 71 pages.</p>
+<blockquote>
+<p>A useful side note: A version 5.0 is expected in 2025, but I will discuss it further at the end of the article.</p></blockquote>
+<p>In essence, the ASVS serves two main purposes. On one hand, it allows organizations to build, evolve, and maintain thoroughly secure applications. On the other hand, it facilitates the alignment of security requirements between service and tool providers and consumers by clarifying expectations and standards.</p>
+<h3 id="a-three-tier-hierarchical-structure">A Three-Tier Hierarchical Structure</h3>
+<p>The ASVS organizes its requirements around three distinct levels, reflecting the intensity of controls to be applied. The higher the level, the more stringent and numerous the requirements. These requirements are distributed across fourteen thematic domains covering all application security issues.</p>
+<p><strong>Level 1</strong>, which could be described as opportunistic, constitutes the first step towards application security. It is also the only level that can be implemented without access to the source code, relying on &ldquo;black-box&rdquo; tests, whether manual or automated. This is the basic level. However, it allows protection against the most obvious vulnerabilities, often listed in the OWASP Top 10 or other public checklists. It helps to deter opportunistic attackers who use basic, unsophisticated, and low-cost techniques.</p>
+<p><strong>Level 2</strong>, designated as standard, is suitable for applications that handle sensitive data or have critical functions. It provides enhanced defense against a wide range of threats by ensuring that security mechanisms are not only present but also functional and effectively used. This level is relevant for applications involved in sensitive inter-company exchanges, handling medical data, or in sectors where data integrity is crucial. For example, human resource management platforms handle sensitive personal data such as salary information, contracts, and performance evaluations. At this level, the application must be able to withstand motivated, technically competent attackers armed with widely available tools.</p>
+<p>Finally, <strong>Level 3</strong> is the advanced level, designed for so-called critical applications. These are applications whose compromise could have major impacts on operations or even the survival of the organization. This includes military systems, critical infrastructure, and applications in the healthcare sector. At this level, security requirements reach an unparalleled depth, with rigorous audits of architecture, code, and testing. The goal is to demonstrate that secure design principles are followed at every stage of the software lifecycle.</p>
+<h2 id="what-is-the-asvs-used-for">What is the ASVS Used For?</h2>
+<p>In practice, the ASVS can play several roles depending on the organization&rsquo;s objectives. It can first be used as a <strong>metric</strong> to provide technical teams and application owners with a clear scale to evaluate the security level of an application. It also serves as a <strong>guide</strong>, helping architects and developers identify relevant controls to integrate into their approach. Additionally, in the context of procurement or contracting, it can serve as an <strong>evaluation criterion</strong>, providing a basis for formulating security requirements to be met by a supplier.</p>
+<h3 id="a-composite-standard">A Composite Standard</h3>
+<p>One of the strengths of the ASVS is its ability to consolidate a wide range of recognized standards into a single document. It includes references from the NIST 800-63-3 on digital identity, the well-known OWASP Top 10 (2017 version – the 2021 version is not yet integrated), and the OWASP Proactive Controls from 2018. Additionally, it incorporates elements from the PCI-DSS standard (section 6.5 of version 3.2.1), a mapping with the CWE (Common Weakness Enumeration) framework, and coverage that extends to both classical architectures and more modern approaches like Agile or DevSecOps. Although not everything is perfectly integrated yet, the unification effort is commendable.</p>
+<p>Moreover, some adjustments from the OWASP Top 10 2021, such as the introduction of categories like &ldquo;Insecure Design&rdquo; (A04:2021) and &ldquo;Software and Data Integrity Failures&rdquo; (A08:2021), or the merging of certain vulnerabilities, are not yet reflected in the current version of the ASVS. This discrepancy highlights the need for an upcoming update.</p>
+<h2 id="asvs-skf-wstg-complementary-objectives-and-uses">ASVS, SKF, WSTG: Complementary Objectives and Uses</h2>
+<p>The <strong>Application Security Verification Standard</strong> (ASVS) is sometimes confused or compared with other tools or frameworks offered by OWASP. It is, therefore, useful to clarify the complementarity between these different projects.</p>
+<p>The ASVS primarily positions itself as a <strong>verification standard</strong>. It provides a rigorous framework for evaluating the security level of an application through a series of organized and hierarchical requirements. It is the normative building block that structures the evaluation of application security—in a way, the <strong>&ldquo;what to verify&rdquo;</strong>, with 286 requirements spread across three levels.</p>
+<p>In parallel, the <strong>OWASP Security Knowledge Framework</strong> (SKF) adopts a more operational and educational approach. It is an open-source web application designed as a learning environment for developers. It aims to teach how to write secure code from the design phase, with concrete examples, best practice guides, and contextualization by category of requirement. Where the ASVS defines expectations, the SKF illustrates <strong>how to meet them</strong> through examples.</p>
+<p>Finally, the <strong>Web Security Testing Guide</strong> (WSTG) complements the ecosystem with a clear focus on auditing. It provides a detailed methodology for conducting security tests on web applications and services. It includes scenarios, techniques, and practical advice for testing different attack surfaces. It is, in a way, the <strong>&ldquo;how to test&rdquo;</strong>, a valuable field guide for penetration testers, security analysts, or developers who wish to deepen their verification aspects.</p>
+<p>These three projects are therefore not necessarily redundant but <strong>complementary</strong>.</p>
+<h2 id="what-the-asvs-does-not-cover-yet">What the ASVS Does Not Cover (Yet)</h2>
+<p>The ASVS, although quite comprehensive, does not cover all aspects of digital system security. It is primarily focused on web applications and services. It does not address <strong>mobile applications</strong>, which fall under a dedicated framework: the <strong>Mobile Application Security Verification Standard (MASVS)</strong>. Similarly, IoT devices, embedded environments, or certain aspects related to physical security are not within its scope.</p>
+<p>It also does not align with a security management system framework like <strong>ISO 27001</strong>.</p>
+<h2 id="large-scale-implementation-feedback">Large-Scale Implementation: Feedback</h2>
+<p>I had the opportunity to deploy the ASVS in a CAC40 company. The context? A desire to structure, at the organizational level, a secure framework for all application developments. It was in this dynamic that I naturally turned to the ASVS, convinced by its comprehensive approach and transversal nature.</p>
+<p>Very quickly, it became necessary to go beyond simply reading the framework. The goal was to use it as a standard applicable to the entire company, in an environment where development practices varied greatly from one team to another (from one department to another and also from one country to another). In this context, a parsimonious approach, both pragmatic and progressive, was essential.</p>
+<h3 id="initial-steps-and-framing">Initial Steps and Framing</h3>
+<p>The first step was awareness. It was necessary to demonstrate the interest in adopting the ASVS on a large scale. For this, I formed a group of experienced developers from different entities to create a federating dynamic around the project. I will spare you the organizational details – it might make this post a bit soporific – but overall, <strong>it took me a whole year</strong> (yes, a full year) to structure and concretize the entire approach.</p>
+<h3 id="creating-a-custom-standard">Creating a Custom Standard</h3>
+<p>We started with the French version of the ASVS as our working base. Very quickly, an obvious fact emerged: for a developer, the document is too dense, too raw. It is not usable as is. We, therefore, proceeded with a complete rewrite, adapting it to our context. The rewriting was done iteratively, starting with the Level 1 requirements, with a gradual maturity progression towards higher levels based on the risk level. To clarify this point, an initial version of the framework was published based solely on Level 1 requirements.</p>
+<p>Even within Level 1, some requirements were reformulated, enriched, or modified into recommendations. We added points deemed missing and brought more clarity where formulations were ambiguous or too strict.</p>
+<h3 id="ensuring-rules-are-actually-applied">Ensuring Rules are Actually Applied</h3>
+<p>This is where the challenges begin. The ASVS provides few concrete indicators to verify the effective implementation of requirements. Therefore, ingenuity is required. We chose to capitalize on the excellent resources of the OWASP, such as the Cheat Sheets or static and dynamic analysis tools (Semgrep, Dependency-Check, etc.).</p>
+<p>While awaiting the construction of a truly unified framework to centralize verifications, the only option is to implement a mix of methods, including code reviews, penetration tests, threat modeling, collecting implementation evidence (such as logs or configurations), and scheduled audits at regular intervals.</p>
+<h3 id="concrete-examples-and-minor-issues-encountered">Concrete Examples and Minor Issues Encountered</h3>
+<p>Some requirements are difficult to implement without clarification; verifying against compromised password databases also poses a problem: how to implement it easily? Which API, which dictionary (Rockyou, etc.)?</p>
+<p>The rule about passwords between 64 to 128 characters maximum, which we preferred to convert into a recommendation, was deemed too rigid in certain contexts, especially for a very heterogeneous company.</p>
+<p>There are also awkward formulations, such as the use of the word &ldquo;automation&rdquo; in French, or the term &ldquo;strong&rdquo; for a CSRF token, which lacks precision. Overall, everything related to the management of secrets, the securing of CI/CD pipelines, or the integration of DevSecOps remains underdeveloped in the framework.</p>
+<p><em><strong>Concrete Examples of Adaptation</strong></em>
+7.1.3 - Verify that the application logs relevant security events, including successful and failed authentication events, access control failures, deserialization failures, and input validation failures. (C5, C7) | Reformulated as:
+The application logs relevant security events, including successful and failed authentication events, access control failures, deserialization failures, input validation failures, and relevant business events.</p>
+<p>8.2.1 - Verify that the application sets sufficient anti-caching headers so that sensitive data is not cached in modern browsers. | Reformulated as:
+The application sets sufficient anti-caching headers so that sensitive data is not cached in modern browsers and content delivery networks (CDNs).</p>
+<p>I won&rsquo;t list everything, as it would be too long&hellip; But here are a few more points below.</p>
+<p>The parts about using code structures that limit risky language functions, segregating code sections that handle application secrets, and minimizing RAM storage are handled with a lot of contortion on our part (as these are not explicitly mentioned in the ASVS).</p>
+<p>Finally, it would be interesting to have a treatment of AI-related security, which is increasingly present in development processes, or a link (or even associations, as done with NIST) to suitable standards. The same applies to code signing, where valuable insights can be found in experiences such as those of Palantir <a href="https://blog.palantir.com/how-palantir-secures-source-control-105c49079eae">How Palantir Secures Source Control | Palantir Blog</a>, or frameworks such as SLSA <a href="https://slsa.dev/">SLSA • Supply-chain Levels for Software Artifacts</a>. As for threat modeling, it is unfortunately not well-supported, which does not really encourage its adoption (I am referring here to the adoption of threat modeling, which, by the way, should be the subject of a specific post as the topic is so interesting) in the context of using the ASVS as a reference.</p>
+<h2 id="in-conclusion">In Conclusion</h2>
+<p>Despite all these limitations, the ASVS remains an exceptional framework. It is sometimes forgotten that it is a free, open project, constantly enriched by an active community. It allows for the structuring of robust application security approaches, and it is even possible to contribute to its evolution. Moreover, version 5.0 is coming soon. And for those who really want to get involved, now might be the perfect time to participate in the construction of this future version.</p>
+
+        </section>
+        <div class="post-tags">
+          
+          
+          <nav class="nav tags">
+            <ul class="tags">
+              
+              <li><a href="/tags/owasp">OWASP</a></li>
+              
+              <li><a href="/tags/application-security">Application Security</a></li>
+              
+              <li><a href="/tags/asvs">ASVS</a></li>
+              
+            </ul>
+          </nav>
+          
+          
+        </div>
+      </div>
+
+      
+      
+    </div>
+
+    </article>
+</main>
+<footer>
+  <div style="display:flex"><a class="soc" href="https://github.com/ka1t3/ka1t3.github.io" rel="me" title="GitHub"><svg class="feather">
+   <use href="/svg/feather-sprite.51cf5647cb1987f769b616558f2620fd9423d72058490231b391bf6aa3744b55.svg#github" />
+</svg></a><a class="border"></a><a class="soc" href="https://twitter.com/athulcajay/" rel="me" title="Twitter"><svg class="feather">
+   <use href="/svg/feather-sprite.51cf5647cb1987f769b616558f2620fd9423d72058490231b391bf6aa3744b55.svg#twitter" />
+</svg></a><a class="border"></a></div>
+  <div class="footer-info">
+    2025  © Kite |  <a
+      href="https://github.com/athul/archie">Archie Theme</a> | Built with <a href="https://gohugo.io">Hugo</a>
+  </div>
+</footer>
+
+</div>
+    </body>
+</html>

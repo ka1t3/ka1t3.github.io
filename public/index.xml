@@ -1,19 +1,48 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>My New Hugo Site</title>
-    <link>http://localhost:1313/</link>
-    <description>Recent content on My New Hugo Site</description>
+    <title>Kite - AA</title>
+    <link>//localhost:1313/</link>
+    <description>Recent content on Kite - AA</description>
     <generator>Hugo</generator>
     <language>en-us</language>
-    <lastBuildDate>Mon, 31 Mar 2025 13:20:44 +0200</lastBuildDate>
-    <atom:link href="http://localhost:1313/index.xml" rel="self" type="application/rss+xml" />
+    <copyright>© Kite</copyright>
+    <lastBuildDate>Fri, 04 Apr 2025 00:00:00 +0000</lastBuildDate>
+    <atom:link href="//localhost:1313/index.xml" rel="self" type="application/rss+xml" />
     <item>
-      <title>DevOps_Rex_CICD</title>
-      <link>http://localhost:1313/posts/devops_rex_cicd/</link>
-      <pubDate>Mon, 31 Mar 2025 13:20:44 +0200</pubDate>
-      <guid>http://localhost:1313/posts/devops_rex_cicd/</guid>
-      <description>&lt;p&gt;Hello World&lt;/p&gt;&#xA;&lt;hr&gt;&#xA;&lt;hr&gt;&#xA;&lt;p&gt;=================&lt;/p&gt;&#xA;&lt;h1 id=&#34;devops-rex&#34;&gt;DevOps REX&lt;/h1&gt;&#xA;&lt;p&gt;C&amp;rsquo;est une &lt;strong&gt;conf&lt;/strong&gt; française&lt;/p&gt;&#xA;&lt;h2 id=&#34;la-vidéo&#34;&gt;La vidéo&lt;/h2&gt;&#xA;&lt;p&gt;blabla&lt;/p&gt;&#xA;&lt;h2 id=&#34;le-contexte&#34;&gt;Le contexte&lt;/h2&gt;&#xA;&lt;p&gt;blabla&lt;/p&gt;</description>
+      <title>Apply OWASP ASVS at scale</title>
+      <link>//localhost:1313/posts/apply-owasp-asvs-at-scale/</link>
+      <pubDate>Fri, 04 Apr 2025 00:00:00 +0000</pubDate>
+      <guid>//localhost:1313/posts/apply-owasp-asvs-at-scale/</guid>
+      <description>&lt;h2 id=&#34;the-asvs&#34;&gt;The ASVS&lt;/h2&gt;&#xA;&lt;p&gt;The ASVS is a framework that defines functional and non-functional security controls to be considered during the design, development, and testing phases of web applications and services. It presents itself as a system that is both demonstrable and reproducible for verifying the security level of an application. The latest officially published version is Release V4.0.3, dated October 2021, and spans 71 pages.&lt;/p&gt;&#xA;&lt;blockquote&gt;&#xA;&lt;p&gt;A useful side note: A version 5.0 is expected in 2025, but I will discuss it further at the end of the article.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>About</title>
+      <link>//localhost:1313/about/</link>
+      <pubDate>Wed, 02 Apr 2025 00:00:00 +0000</pubDate>
+      <guid>//localhost:1313/about/</guid>
+      <description>&lt;p&gt;Hi,&lt;/p&gt;&#xA;&lt;p&gt;Passionate about cybersecurity, with a penchant for application security, I love exploring new things in my spare time. This blog is my notebook, where I share my thoughts and realizations on my projects.&lt;/p&gt;&#xA;&lt;p&gt;Addendum: Everything published in this blog is my sole responsibility!&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>DevOps Rex 2025</title>
+      <link>//localhost:1313/posts/devops_rex_cicd/</link>
+      <pubDate>Mon, 31 Mar 2025 00:00:00 +0000</pubDate>
+      <guid>//localhost:1313/posts/devops_rex_cicd/</guid>
+      <description>&lt;h2 id=&#34;devsecops-in-an-industrial-context&#34;&gt;DevSecOps in an Industrial Context&lt;/h2&gt;&#xA;&lt;p&gt;In the ever-evolving universe of DevSecOps, integrating security at the heart of CI/CD pipelines has become an imperative. How do you meet this challenge in a complex industrial environment? That&amp;rsquo;s the question I&amp;rsquo;ll be answering in this captivating presentation (yes, I&amp;rsquo;m tooting my own horn a bit).&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>My Second Post</title>
+      <link>//localhost:1313/posts/second/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>//localhost:1313/posts/second/</guid>
+      <description>&lt;h2 id=&#34;heading-of-the-post&#34;&gt;Heading of the Post&lt;/h2&gt;&#xA;&lt;p&gt;Start writing your content here. You can add more sections, images, links, and various formatting to enrich your post. Here are some ideas to get started:&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>My Third Post: We Demonstrate Images</title>
+      <link>//localhost:1313/posts/third/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>//localhost:1313/posts/third/</guid>
+      <description>&lt;h1 id=&#34;reflecting-on-carl-sagans-pale-blue-dot&#34;&gt;Reflecting on Carl Sagan&amp;rsquo;s Pale Blue Dot&lt;/h1&gt;&#xA;&lt;p&gt;&lt;img src=&#34;https://images.unsplash.com/photo-1572442350603-6cf8355670dd?q=80&amp;amp;w=800&amp;amp;auto=format&amp;amp;fit=crop&amp;amp;ixlib=rb-4.0.3&amp;amp;ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&#34; alt=&#34;Image of Space&#34;&gt;&lt;/p&gt;&#xA;&lt;p&gt;&lt;em&gt;Photo by &lt;a href=&#34;%22https://unsplash.com/@juniperphoton?utm_content=creditCopyText&amp;amp;utm_medium=referral&amp;amp;utm_source=unsplash%22&#34;&gt;JuniperPhoton&lt;/a&gt;&lt;/em&gt;&lt;/p&gt;</description>
     </item>
   </channel>
 </rss>

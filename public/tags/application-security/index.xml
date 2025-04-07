@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Application Security on Kite - AA</title>
+    <link>//localhost:1313/tags/application-security/</link>
+    <description>Recent content in Application Security on Kite - AA</description>
+    <generator>Hugo</generator>
+    <language>en-us</language>
+    <copyright>© Kite</copyright>
+    <lastBuildDate>Fri, 04 Apr 2025 00:00:00 +0000</lastBuildDate>
+    <atom:link href="//localhost:1313/tags/application-security/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Apply OWASP ASVS at scale</title>
+      <link>//localhost:1313/posts/apply-owasp-asvs-at-scale/</link>
+      <pubDate>Fri, 04 Apr 2025 00:00:00 +0000</pubDate>
+      <guid>//localhost:1313/posts/apply-owasp-asvs-at-scale/</guid>
+      <description>&lt;h2 id=&#34;the-asvs&#34;&gt;The ASVS&lt;/h2&gt;&#xA;&lt;p&gt;The ASVS is a framework that defines functional and non-functional security controls to be considered during the design, development, and testing phases of web applications and services. It presents itself as a system that is both demonstrable and reproducible for verifying the security level of an application. The latest officially published version is Release V4.0.3, dated October 2021, and spans 71 pages.&lt;/p&gt;&#xA;&lt;blockquote&gt;&#xA;&lt;p&gt;A useful side note: A version 5.0 is expected in 2025, but I will discuss it further at the end of the article.&lt;/p&gt;</description>
+    </item>
+  </channel>
+</rss>

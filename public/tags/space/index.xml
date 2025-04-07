@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Space on Kite - AA</title>
+    <link>//localhost:1313/tags/space/</link>
+    <description>Recent content in Space on Kite - AA</description>
+    <generator>Hugo</generator>
+    <language>en-us</language>
+    <copyright>© Kite</copyright>
+    <atom:link href="//localhost:1313/tags/space/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>My Third Post: We Demonstrate Images</title>
+      <link>//localhost:1313/posts/third/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>//localhost:1313/posts/third/</guid>
+      <description>&lt;h1 id=&#34;reflecting-on-carl-sagans-pale-blue-dot&#34;&gt;Reflecting on Carl Sagan&amp;rsquo;s Pale Blue Dot&lt;/h1&gt;&#xA;&lt;p&gt;&lt;img src=&#34;https://images.unsplash.com/photo-1572442350603-6cf8355670dd?q=80&amp;amp;w=800&amp;amp;auto=format&amp;amp;fit=crop&amp;amp;ixlib=rb-4.0.3&amp;amp;ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&#34; alt=&#34;Image of Space&#34;&gt;&lt;/p&gt;&#xA;&lt;p&gt;&lt;em&gt;Photo by &lt;a href=&#34;%22https://unsplash.com/@juniperphoton?utm_content=creditCopyText&amp;amp;utm_medium=referral&amp;amp;utm_source=unsplash%22&#34;&gt;JuniperPhoton&lt;/a&gt;&lt;/em&gt;&lt;/p&gt;</description>
+    </item>
+  </channel>
+</rss>
