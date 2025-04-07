@@ -1,7 +1,8 @@
 +++
 title = '17 essential points for securing your sensitive IT infrastructures exposed to the Internet'
 draft = false
-tags = ["Sky"]
+date  = 2020-04-02
+tags = ["Infrastructure Security", "Internet"]
 +++
 
 ## Intro
