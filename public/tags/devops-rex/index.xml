@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>DevOps REX on Kite - AA</title>
+    <title>DevOps REX on Kite</title>
     <link>//localhost:1313/tags/devops-rex/</link>
-    <description>Recent content in DevOps REX on Kite - AA</description>
+    <description>Recent content in DevOps REX on Kite</description>
     <generator>Hugo</generator>
     <language>en-us</language>
     <copyright>© Kite</copyright>
@@ -14,7 +14,7 @@
       <link>//localhost:1313/posts/devops_rex_cicd/</link>
       <pubDate>Mon, 31 Mar 2025 00:00:00 +0000</pubDate>
       <guid>//localhost:1313/posts/devops_rex_cicd/</guid>
-      <description>&lt;h1 id=&#34;devsecops-in-an-industrial-context&#34;&gt;DevSecOps in an Industrial Context&lt;/h1&gt;&#xA;&lt;p&gt;In the ever-evolving universe of DevSecOps, integrating security at the heart of CI/CD pipelines has become an imperative. How do you meet this challenge in a complex industrial environment? That&amp;rsquo;s the question I&amp;rsquo;ll be answering in this captivating presentation (yes, I&amp;rsquo;m tooting my own horn a bit).&lt;/p&gt;</description>
+      <description>&lt;h2 id=&#34;devsecops-in-an-industrial-context&#34;&gt;DevSecOps in an Industrial Context&lt;/h2&gt;&#xA;&lt;p&gt;In the ever-evolving universe of DevSecOps, integrating security at the heart of CI/CD pipelines has become an imperative. How do you meet this challenge in a complex industrial environment? That&amp;rsquo;s the question I&amp;rsquo;ll be answering in this captivating presentation (yes, I&amp;rsquo;m tooting my own horn a bit).&lt;/p&gt;</description>
     </item>
   </channel>
 </rss>

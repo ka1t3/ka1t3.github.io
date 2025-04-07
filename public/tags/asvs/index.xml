@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>ASVS on Kite - AA</title>
+    <title>ASVS on Kite</title>
     <link>//localhost:1313/tags/asvs/</link>
-    <description>Recent content in ASVS on Kite - AA</description>
+    <description>Recent content in ASVS on Kite</description>
     <generator>Hugo</generator>
     <language>en-us</language>
     <copyright>© Kite</copyright>

@@ -1,6 +1,6 @@
 baseURL = 'kite.github.io'
 languageCode = 'en-us'
-title = 'Kite - AA'
+title = 'Kite'
 theme = "archie"
 copyright = "© Kite"
 pygmentsstyle = "monokai"
@@ -12,8 +12,8 @@ favicon = "https://img.icons8.com/lollipop/48/cyber-security.png"
 og_image = "https://raw.githubusercontent.com/athul/archie/master/images/archie-dark.png"
 mode = "toggle"
 useCDN = true
-subtitle = "Minimal and Clean [blog theme for Hugo](https://github.com/athul/archie)"
-description = "Archie is a Minimal and Clean theme for Hugo"
+subtitle = "Hi there! 👋 This blog is dedicated to exploring the fascinating world of cybersecurity, especially application security. Whether you're a seasoned expert or just starting out, you'll find insights, tips, and strategies to help you build safer, stronger applications. Let's secure the future together! 🚀"
+description = "Ka1t3 blog"
 
 [[params.social]]
 name = "GitHub"
@@ -21,9 +21,9 @@ icon = "github"
 url = "https://github.com/ka1t3/ka1t3.github.io"
 
 [[params.social]]
-name = "Twitter"
-icon = "twitter"
-url = "https://twitter.com/athulcajay/"
+name = "linkedin"
+icon = "linkedin"
+url = "www.linkedin.com/in/anohable"
 
 [[menu.main]]
 name = "Home"
