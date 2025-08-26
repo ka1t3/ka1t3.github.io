@@ -7,8 +7,15 @@
     <generator>Hugo</generator>
     <language>en-us</language>
     <copyright>© Kite</copyright>
-    <lastBuildDate>Fri, 04 Apr 2025 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Tue, 26 Aug 2025 00:00:00 +0000</lastBuildDate>
     <atom:link href="//localhost:1313/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Python skills (part 1)</title>
+      <link>//localhost:1313/posts/python-skills-part-1/</link>
+      <pubDate>Tue, 26 Aug 2025 00:00:00 +0000</pubDate>
+      <guid>//localhost:1313/posts/python-skills-part-1/</guid>
+      <description>&lt;h2 id=&#34;the-reminder&#34;&gt;The reminder&lt;/h2&gt;&#xA;&lt;p&gt;A while ago, I was asked this question:&lt;/p&gt;&#xA;&lt;p&gt;“Give the number of occurrences of IP addresses in this log file.” You need to count how many times each IP address appears in this txt file.&lt;/p&gt;&#xA;&lt;p&gt;Example of file content:&lt;/p&gt;&#xA;&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-txt&#34; data-lang=&#34;txt&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;192.168.1.1 - - [10/Oct/2025:13:55:36 +0200] &amp;#34;GET /index.html HTTP/1.1&amp;#34; 200 532&#xA;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;10.0.0.14 - - [10/Oct/2025:13:56:01 +0200] &amp;#34;POST /login HTTP/1.1&amp;#34; 403 143&#xA;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;192.168.1.1 - - [10/Oct/2025:13:56:25 +0200] &amp;#34;GET /favicon.ico HTTP/1.1&amp;#34; 200 324&#xA;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;172.16.0.7 - - [10/Oct/2025:13:57:00 +0200] &amp;#34;GET /about HTTP/1.1&amp;#34; 404 225&#xA;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;10.0.0.14 - - [10/Oct/2025:13:57:30 +0200] &amp;#34;GET /profile HTTP/1.1&amp;#34; 200 621&#xA;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;192.168.1.1 - - [10/Oct/2025:13:58:00 +0200] &amp;#34;GET /contact HTTP/1.1&amp;#34; 200 145&#xA;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;[]...[]&#xA;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;172.16.0.8 - - [10/Oct/2025:14:10:00 +0200] &amp;#34;GET /about HTTP/1.1&amp;#34; 404 225&#xA;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;10.0.0.10 - - [10/Oct/2025:14:10:10 +0200] &amp;#34;GET /profile HTTP/1.1&amp;#34; 200 621&#xA;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;192.168.1.2 - - [10/Oct/2025:14:10:30 +0200] &amp;#34;GET /contact HTTP/1.1&amp;#34; 200 145&#xA;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;172.16.0.9 - - [10/Oct/2025:14:10:52 +0200] &amp;#34;GET /support HTTP/1.1&amp;#34; 200 543&#xA;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;Well, my code was flawed, and i was unable to provide a clean answer.&lt;/p&gt;</description>
+    </item>
     <item>
       <title>Apply OWASP ASVS at scale</title>
       <link>//localhost:1313/posts/apply-owasp-asvs-at-scale/</link>

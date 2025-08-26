@@ -2,16 +2,16 @@
 date  = 2025-08-26
 draft  = false
 title  = 'Python skills (part 1)'
-tags = ["Development","Code", "Python"]
+tags = ["Code", "Python"]
 +++
 
 ## The reminder
 
-Il y a quelques temps, j'ai eu cette question :
+A while ago, I was asked this question:
 
-"Donner le nombre d'apparition des adresses IP de ce fichier de log", il faut compter combien de fois chaque adresse IP apparaît dans ce fichier txt "
+“Give the number of occurrences of IP addresses in this log file.” You need to count how many times each IP address appears in this txt file.
 
-Example de contenu du fichier :
+Example of file content:
 
 ```txt
 192.168.1.1 - - [10/Oct/2025:13:55:36 +0200] "GET /index.html HTTP/1.1" 200 532
@@ -27,16 +27,16 @@ Example de contenu du fichier :
 172.16.0.9 - - [10/Oct/2025:14:10:52 +0200] "GET /support HTTP/1.1" 200 543
 ```
 
-Eh bien, mon code était bancal et je n'ai pas réussi à fournir une réponse propre.
+Well, my code was flawed, and i was unable to provide a clean answer.
 
-C'est à ce moment que j'ai réalisé que je devais revoir mes bases de developpement. (j'avais oublié et surtout perdu beaucoup de réflexe …).
-J'évoquerai dans un autre article comment j'en suis arrivé à la sécurité applicative et surtout ce à quoi mon rôle de Lead Application Security correspond dans une entreprise de plus de 350 000 salariés et plus de 1000 projets. Mais force est de constater que je me suis éloigné du dev pour me rapprocher de la stratégie AppSec.
+That's when I realized I needed to brush up on my development basics. (I had forgotten and, more importantly, lost a lot of muscle memory...).
+In another article, I'll talk about how i got into application security and, above all, what my role as Lead Application Security entails in a company with over 350,000 employees and more than 1,000 projects. But it's clear that I've moved away from development to focus more on AppSec strategy.
 
-Allez hop, c'est partit pour une remise à niveau avec comme objectif de développer le max de compétences sur l'automatisation d'action de sécurité. Ci-dessous un lien vers un repo Github qui contient toutes mes notes sur ces cours afin que vous puissiez vous exercer aussi.
+So here we go, it's time to rebuild my skills with the goal of developing as many skills as possible in security automation. Below is a link to a Github repo that contains all my notes on the courses i'm followed so that you can practice too.
 
-Le lien : https://github.com/ka1t3/Python.git
+The link : https://github.com/ka1t3/Python.git
 
-Quant à la question de tout à l'heure, ci-dessous la résolution de Gemini 2.5 pro :
+As for the question from earlier, below is a solution from Gemini 2.5 pro:
 
 ```Python
 import re
@@ -104,10 +104,10 @@ if __name__ == "__main__":
 
 ```
 
-Mais il y a plusieurs façon de le faire, à vous d'essayer pour vous amuser un peu.
+But there are slew of ways to do this, so try them out and have some fun.
 
-Ma proposition alternative :
-Rajouter une ligne ip,timestamp,method,url,status,size et changer l'extension du fichier en .csv pour répondre à la question avec pandas 
+**My alternative suggestion**
+Add a line ip,timestamp,method,url,status,size and change the file extension to .csv to answer the question with pandas.
 
 ```Python
 import pandas as pd
@@ -140,14 +140,15 @@ result_counts = count_entries('logs.csv', 10, 'lang')
 print(result_counts)
 ```
 
+## The wod / practice
 
-Vous trouverez dans mes notes des concepts un peu plus avancés sur certaines notions.
-Personnellement, pour ne pas oublier (encore…) et me retrouver dérouté, il n'y a rien de mieux que la pratique. 
-Je l'a décompose en deux partie, une revue des fondamentaux (principe de la répétition espacée) puis je réalise des projets en parallèle pour ancrer ces connaissances.
-Je ferai une note de blog spécifique sur le projet que je réalise en ce moment (quand j'arrive à trouver le temps entre mon travail, mes enfants, mes hobbies, la préparation de mes certificcations)
+You will find slightly more advanced concepts on certain topics in my notes.
+Personally, to avoid forgetting (again...) and getting confused, there is nothing better than practice. 
+I break it down into two parts: a review of the fundamentals (spaced repetition principle), then I carry out projects in parallel to reinforce this knowledge.
+I will write a specific blog post about the project I am currently working on (when I can find the time between my work, my children, my hobbies, and preparing for my certifications).
 
-Globalement, le net regorge de très bon contenu pour avoir de bonnes bases. 
-Pour une version pleinement gratuite, vous pouvez suivre ces cours, ce sera un très bon début :
+Overall, the internet is full of great content for building a solid foundation. 
+For a completely free version, you can take these courses, which are a great place to start:
 
 
 ```
@@ -157,23 +158,28 @@ Pour une version pleinement gratuite, vous pouvez suivre ces cours, ce sera un t
 
 ```
 
-Pour la revue des fondamentaux, j'utilise cette méthode simple (mais pas la plus adéquate en cas de maj du repo github), charger le fichier dans une IA (j'utilise un forfait gratuit que j'ai eu avec perplexity) et demander lui de vous proposer des exercices 
-Exemple :
-- Contexte :
-Je dispose d’un fichier de code Python que je vais te fournir. Ce fichier contient [par ex. : une classe, des fonctions utilitaires, script, etc.]. Mon objectif est d’apprendre et de progresser en Python en pratiquant sur la base de ce code.
-- Demande :
-Propose-moi une série d’exercices progressifs et pratiques (entre 5 et 10) directement liés au contenu du fichier. Les exercices doivent m’aider à mieux comprendre, modifier et améliorer le code fourni.
-- Format de sortie :
-    1. Liste numérotée des exercices.
-    2. Chaque exercice doit être formulé sous forme d’instruction claire (ex. : "Ajoute une fonction qui…", "Modifie la classe pour…").
-    3. Indique pour chaque exercice le niveau de difficulté (Débutant, Intermédiaire, Avancé).
-    4. Donne un objectif pédagogique attendu (ex. : "Comprendre l’héritage", "Pratiquer les boucles", "Manipuler des fichiers").
-- Ce que tu ne dois pas faire :
-    - Ne pas donner directement les solutions ou le code corrigé.
-    - Ne pas proposer d’exercices sans lien avec le fichier fourni.
-    - Ne pas rester trop vague (chaque exercice doit être actionnable).
-    - Ne pas proposer des tâches impossibles ou non adaptées au niveau du code existant.
+For reviewing the fundamentals, i use this simple method (although it’s not the most suitable if the GitHub repo gets updated): load the file into an AI (I use a free plan i got with Perplexity) and ask it to propose exercises for you.
 
-Une autre méthode est l'utilisation de gitinjest afin de mieux alimenter votre LLM et donc, mieux interagir avec le code.
+**Example of prompt**
+
+Context:
+- I have a Python code file that i will provide. This file contains [e.g., a class, utility functions, a script, etc.]. My goal is to learn and improve in Python by practicing directly on this code.
+
+Request:
+- Propose a series of progressive, practical exercises (between 5 and 10) directly related to the content of the file. The exercises should help me better understand, modify, and improve the provided code.
+
+Output format:
+- Numbered list of exercises.
+- Each exercise should be written as a clear instruction (e.g., “Add a function that…”, “Modify the class to…”).
+- Indicate the difficulty level for each exercise (Beginner, Intermediate, Advanced).
+- Provide an expected learning objective (e.g., “Understand inheritance”, “Practice loops”, “Handle files”).
+
+What you should not do:
+- Do not provide the solutions or corrected code directly.
+- Do not suggest exercises unrelated to the provided file.
+- Do not be too vague (each exercise must be actionable).
+- Do not propose tasks that are impossible or unsuitable for the current code level.
+
+Another method is to use Gitinjest [Gitinjest](https://gitingest.com/) to better feed your LLM and therefore interact more effectively with the code.
 
 A bientôt !

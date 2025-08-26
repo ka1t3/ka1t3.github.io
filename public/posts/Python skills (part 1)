@@ -140,6 +140,7 @@ result_counts = count_entries('logs.csv', 10, 'lang')
 print(result_counts)
 ```
 
+## The wod
 
 Vous trouverez dans mes notes des concepts un peu plus avancés sur certaines notions.
 Personnellement, pour ne pas oublier (encore…) et me retrouver dérouté, il n'y a rien de mieux que la pratique. 
