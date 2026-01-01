@@ -50,12 +50,12 @@ This unique blend of academic rigor and industry experience has shaped my approa
 - ☁️ AWS Certified Security - Specialty (In Progress)
 
 **DevSecOps:**
-- 🛡️ GCSA - GIAC Cloud Security Automation
-- 🔗 JFTC 507 - Securing Your Software Supply Chain with JFrog Xray 
+- 🛡️ GCSA - GIAC Cloud Security Automation (Active)
+- 🔗 JFTC 507 - Securing Your Software Supply Chain with JFrog Xray (Active)
 
 > 💡 **Continuous Learning:** I'm committed to staying current with the evolving security landscape through regular certification updates and hands-on practice! Credly : https://www.credly.com/users/anoh-able.7dcc92fd/badges#credly
 
-## Education & Research 🎓
+## Education 🎓
 - **Master in Computer Science** - Paris Dauphine University, France (2018)
 - **Master in Environmental Science** - Paris Cité University, France (2017)
 - **Bachelor in Physics and Chemistry** - Paris Sorbonne Paris Nord University, France (2015)
