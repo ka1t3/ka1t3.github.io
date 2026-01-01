@@ -1,11 +1,9 @@
 +++
 title = 'About'
 draft = false
-date = 2025-04-02
+date = 2026-01-01
 tags = ["introduction"]
 +++
-
-<<<<<<< HEAD
 
 Hi! 👋
 

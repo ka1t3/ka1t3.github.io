@@ -1,5 +1,5 @@
 +++
-date  = 2025-10-16
+date  = 2025-01-01
 draft  = false
 title  = 'Python skills (part 2) - FastAPI'
 tags = ["Code", "Python", "FastAPI"]
@@ -37,7 +37,7 @@ So, **The Knowledge Agora** is a collaborative micro-blogging platform where use
 
 ### Key Stages of API Design
 
-I wanted something freely accessible (not confined in a book that encourages spending). So I chose to go with the freely accessible Postman article (a reference in the API universe for structuring the project) source: https://www.postman.com/api-platform/api-design/
+I wanted something freely accessible (not confined in a book that encourages spending). So I chose to go with the freely accessible Postman article (Postman is a reference in the API universe) source: https://www.postman.com/api-platform/api-design/
 
 #### Step 1: Determine What the API is Intended to Do
 "An API that is responsible for an authentication workflow will have different requirements than an API that allows a user to browse a product catalog, so it's important to align on the use case before making any other decisions. The use case may also have implications on the type of architecture you choose."
