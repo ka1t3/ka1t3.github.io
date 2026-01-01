@@ -1,5 +1,5 @@
 +++
-date  = 2025-01-01
+date  = 2026-01-01
 draft  = false
 title  = 'Python skills (part 2) - FastAPI'
 tags = ["Code", "Python", "FastAPI"]
