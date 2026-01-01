@@ -38,6 +38,23 @@ This unique blend of academic rigor and industry experience has shaped my approa
 - Application Security
 - Cloud Security Architecture
 
+## Professional Certifications 🏆
+**Security & Risk Management:**
+- 🔒 CISSP - Certified Information Systems Security Professional (Active)
+- 📜 ISO 27001 Lead Auditor (Active)
+
+**Cloud Security:**
+- 🌩️ CCSP - Certified Cloud Security Professional (Active)
+- 🔐 Azure Security Engineer (Expired)
+- 🏗️ GCAD - GIAC Cloud Security Architecture and Design (In Progress) 
+- ☁️ AWS Certified Security - Specialty (In Progress)
+
+**DevSecOps:**
+- 🛡️ GCSA - GIAC Cloud Security Automation
+- 🔗 JFTC 507 - Securing Your Software Supply Chain with JFrog Xray 
+
+> 💡 **Continuous Learning:** I'm committed to staying current with the evolving security landscape through regular certification updates and hands-on practice! Credly : https://www.credly.com/users/anoh-able.7dcc92fd/badges#credly
+
 ## Education & Research 🎓
 - **Master in Computer Science** - Paris Dauphine University, France (2018)
 - **Master in Environmental Science** - Paris Cité University, France (2017)
