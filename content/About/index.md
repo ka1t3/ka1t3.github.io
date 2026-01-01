@@ -5,6 +5,7 @@ date = 2025-04-02
 tags = ["introduction"]
 +++
 
+<<<<<<< HEAD
 
 Hi! 👋
 
@@ -68,3 +69,4 @@ I strongly believe in combining theoretical knowledge with practical application
 ---
 
 **Disclaimer:** The content published in this blog represents my personal views and opinions! 🙏
+
