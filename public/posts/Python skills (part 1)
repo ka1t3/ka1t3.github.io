@@ -1,0 +1,180 @@
++++
+date  = 2025-08-26
+draft  = false
+title  = 'Python skills (part 1)'
+tags = ["Development","Code", "Python"]
++++
+
+## The reminder
+
+Il y a quelques temps, j'ai eu cette question :
+
+"Donner le nombre d'apparition des adresses IP de ce fichier de log", il faut compter combien de fois chaque adresse IP apparaît dans ce fichier txt "
+
+Example de contenu du fichier :
+
+```txt
+192.168.1.1 - - [10/Oct/2025:13:55:36 +0200] "GET /index.html HTTP/1.1" 200 532
+10.0.0.14 - - [10/Oct/2025:13:56:01 +0200] "POST /login HTTP/1.1" 403 143
+192.168.1.1 - - [10/Oct/2025:13:56:25 +0200] "GET /favicon.ico HTTP/1.1" 200 324
+172.16.0.7 - - [10/Oct/2025:13:57:00 +0200] "GET /about HTTP/1.1" 404 225
+10.0.0.14 - - [10/Oct/2025:13:57:30 +0200] "GET /profile HTTP/1.1" 200 621
+192.168.1.1 - - [10/Oct/2025:13:58:00 +0200] "GET /contact HTTP/1.1" 200 145
+[]...[]
+172.16.0.8 - - [10/Oct/2025:14:10:00 +0200] "GET /about HTTP/1.1" 404 225
+10.0.0.10 - - [10/Oct/2025:14:10:10 +0200] "GET /profile HTTP/1.1" 200 621
+192.168.1.2 - - [10/Oct/2025:14:10:30 +0200] "GET /contact HTTP/1.1" 200 145
+172.16.0.9 - - [10/Oct/2025:14:10:52 +0200] "GET /support HTTP/1.1" 200 543
+```
+
+Eh bien, mon code était bancal et je n'ai pas réussi à fournir une réponse propre.
+
+C'est à ce moment que j'ai réalisé que je devais revoir mes bases de developpement. (j'avais oublié et surtout perdu beaucoup de réflexe …).
+J'évoquerai dans un autre article comment j'en suis arrivé à la sécurité applicative et surtout ce à quoi mon rôle de Lead Application Security correspond dans une entreprise de plus de 350 000 salariés et plus de 1000 projets. Mais force est de constater que je me suis éloigné du dev pour me rapprocher de la stratégie AppSec.
+
+Allez hop, c'est partit pour une remise à niveau avec comme objectif de développer le max de compétences sur l'automatisation d'action de sécurité. Ci-dessous un lien vers un repo Github qui contient toutes mes notes sur ces cours afin que vous puissiez vous exercer aussi.
+
+Le lien : https://github.com/ka1t3/Python.git
+
+Quant à la question de tout à l'heure, ci-dessous la résolution de Gemini 2.5 pro :
+
+```Python
+import re
+from collections import Counter
+import os
+
+def count_ip_occurrences(log_file_path):
+    """
+    Analyze a log file to count the occurrences of each IP address.
+
+    Args:
+        log_file_path (str): Path to the log file.
+
+    Returns:
+        collections.Counter: A Counter object containing the IPs and their counts,
+                             or None if the file is not found.
+    """
+    # 1. Check if the log file exists before proceeding
+    if not os.path.exists(log_file_path):
+        print(f"Error: The file '{log_file_path}' was not found.")
+        return None
+
+    # 2. Define the regular expression (regex) to extract IP addresses (IPv4 format)
+    #    - \b ensures that we capture a whole word (prevents matching part of a longer number)
+    #    - (?:...) is a non-capturing group
+    ip_pattern = re.compile(r'\b(?:[0-9]{1,3}\.){3}[0-9]{1,3}\b')
+
+    try:
+        # 3. Read the file and find all matches
+        with open(log_file_path, 'r', encoding='utf-8') as file:
+            # Read the entire content at once for global searching
+            content = file.read()
+            # re.findall returns a list of all strings that match the pattern
+            ip_list = ip_pattern.findall(content)
+
+        # 4. Use collections.Counter to count the list elements
+        #    This is the simplest and most efficient method for this task.
+        ip_counts = Counter(ip_list)
+        return ip_counts
+
+    except Exception as e:
+        print(f"An error occurred while reading or processing the file: {e}")
+        return None
+
+# --- Script entry point ---
+if __name__ == "__main__":
+    # Name of the file containing the logs.
+    # Make sure this file is in the same folder as the Python script,
+    # or provide a full path (e.g., "C:/Users/YourName/Documents/logs.txt").
+    LOG_FILE = 'apache_logs.txt'
+
+    # Call the main function
+    ip_occurrences = count_ip_occurrences(LOG_FILE)
+
+    # 5. Display the results clearly
+    if ip_occurrences:
+        print(f"Analysis of the file '{LOG_FILE}' completed.")
+        print("Number of occurrences for each IP address:")
+        
+        # The .most_common() method sorts results from most to least frequent.
+        for ip, count in ip_occurrences.most_common():
+            print(f"- {ip}: {count} times")
+    else:
+        print("No results to display due to an error or empty file.")
+
+```
+
+Mais il y a plusieurs façon de le faire, à vous d'essayer pour vous amuser un peu.
+
+Ma proposition alternative :
+Rajouter une ligne ip,timestamp,method,url,status,size et changer l'extension du fichier en .csv pour répondre à la question avec pandas 
+
+```Python
+import pandas as pd
+
+# Define count_entries()
+def count_entries(csv_file, c_size, colname):
+    """Return a dictionary with counts of
+    occurrences as value for each key."""
+    
+    # Initialize an empty dictionary: counts_dict
+    counts_dict = {}
+
+    # Iterate over the file chunk by chunk (but not necessary for a small file)
+    for chunk in pd.read_csv(csv_file, chunksize=c_size):
+
+        # Iterate over the column in DataFrame
+        for entry in chunk[colname]:
+            if entry in counts_dict.keys():
+                counts_dict[entry] += 1
+            else:
+                counts_dict[entry] = 1
+
+    # Return counts_dict
+    return counts_dict
+
+# Call count_entries(): result_counts
+result_counts = count_entries('logs.csv', 10, 'lang')
+
+# Print result_counts
+print(result_counts)
+```
+
+## The wod
+
+Vous trouverez dans mes notes des concepts un peu plus avancés sur certaines notions.
+Personnellement, pour ne pas oublier (encore…) et me retrouver dérouté, il n'y a rien de mieux que la pratique. 
+Je l'a décompose en deux partie, une revue des fondamentaux (principe de la répétition espacée) puis je réalise des projets en parallèle pour ancrer ces connaissances.
+Je ferai une note de blog spécifique sur le projet que je réalise en ce moment (quand j'arrive à trouver le temps entre mon travail, mes enfants, mes hobbies, la préparation de mes certificcations)
+
+Globalement, le net regorge de très bon contenu pour avoir de bonnes bases. 
+Pour une version pleinement gratuite, vous pouvez suivre ces cours, ce sera un très bon début :
+
+
+```
+├── Calmcode : https://calmcode.io/ 
+├── Futurecoder : https://futurecoder.io/
+├── Automate boring stuff with Python : https://automatetheboringstuff.com/
+
+```
+
+Pour la revue des fondamentaux, j'utilise cette méthode simple (mais pas la plus adéquate en cas de maj du repo github), charger le fichier dans une IA (j'utilise un forfait gratuit que j'ai eu avec perplexity) et demander lui de vous proposer des exercices 
+Exemple :
+- Contexte :
+Je dispose d’un fichier de code Python que je vais te fournir. Ce fichier contient [par ex. : une classe, des fonctions utilitaires, script, etc.]. Mon objectif est d’apprendre et de progresser en Python en pratiquant sur la base de ce code.
+- Demande :
+Propose-moi une série d’exercices progressifs et pratiques (entre 5 et 10) directement liés au contenu du fichier. Les exercices doivent m’aider à mieux comprendre, modifier et améliorer le code fourni.
+- Format de sortie :
+    1. Liste numérotée des exercices.
+    2. Chaque exercice doit être formulé sous forme d’instruction claire (ex. : "Ajoute une fonction qui…", "Modifie la classe pour…").
+    3. Indique pour chaque exercice le niveau de difficulté (Débutant, Intermédiaire, Avancé).
+    4. Donne un objectif pédagogique attendu (ex. : "Comprendre l’héritage", "Pratiquer les boucles", "Manipuler des fichiers").
+- Ce que tu ne dois pas faire :
+    - Ne pas donner directement les solutions ou le code corrigé.
+    - Ne pas proposer d’exercices sans lien avec le fichier fourni.
+    - Ne pas rester trop vague (chaque exercice doit être actionnable).
+    - Ne pas proposer des tâches impossibles ou non adaptées au niveau du code existant.
+
+Une autre méthode est l'utilisation de gitinjest afin de mieux alimenter votre LLM et donc, mieux interagir avec le code.
+
+A bientôt !

@@ -1,0 +1,46 @@
+baseURL = 'kite.github.io'
+languageCode = 'en-us'
+title = 'Kite'
+theme = "archie"
+copyright = "© Kite"
+pygmentsstyle = "monokai"
+pygmentscodefences = true
+pygmentscodefencesguesssyntax = true
+
+[params]
+favicon = "https://img.icons8.com/lollipop/48/cyber-security.png" 
+og_image = "https://raw.githubusercontent.com/athul/archie/master/images/archie-dark.png"
+mode = "toggle"
+useCDN = true
+subtitle = "Hi there! 👋 This blog is dedicated to exploring the fascinating world of cybersecurity, especially application security. Whether you're a seasoned expert or just starting out, you'll find insights, tips, and strategies to help you build safer, stronger applications. Let's secure the future together! 🚀"
+description = "Ka1t3 blog"
+
+[[params.social]]
+name = "GitHub"
+icon = "github"
+url = "https://github.com/ka1t3/ka1t3.github.io"
+
+[[params.social]]
+name = "linkedin"
+icon = "linkedin"
+url = "www.linkedin.com/in/anohable"
+
+[[menu.main]]
+name = "Home"
+url = "/"
+weight = 1
+
+[[menu.main]]
+name = "All posts"
+url = "/posts"
+weight = 2
+
+[[menu.main]]
+name = "About"
+url = "/about"
+weight = 3
+
+[[menu.main]]
+name = "Tags"
+url = "/tags"
+weight = 4

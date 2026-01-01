@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Tags on Kite</title>
+    <link>//localhost:1313/tags/</link>
+    <description>Recent content in Tags on Kite</description>
+    <generator>Hugo</generator>
+    <language>en-us</language>
+    <copyright>© Kite</copyright>
+    <lastBuildDate>Tue, 26 Aug 2025 00:00:00 +0000</lastBuildDate>
+    <atom:link href="//localhost:1313/tags/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Code</title>
+      <link>//localhost:1313/tags/code/</link>
+      <pubDate>Tue, 26 Aug 2025 00:00:00 +0000</pubDate>
+      <guid>//localhost:1313/tags/code/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Development</title>
+      <link>//localhost:1313/tags/development/</link>
+      <pubDate>Tue, 26 Aug 2025 00:00:00 +0000</pubDate>
+      <guid>//localhost:1313/tags/development/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Python</title>
+      <link>//localhost:1313/tags/python/</link>
+      <pubDate>Tue, 26 Aug 2025 00:00:00 +0000</pubDate>
+      <guid>//localhost:1313/tags/python/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Application Security</title>
+      <link>//localhost:1313/tags/application-security/</link>
+      <pubDate>Fri, 04 Apr 2025 00:00:00 +0000</pubDate>
+      <guid>//localhost:1313/tags/application-security/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>ASVS</title>
+      <link>//localhost:1313/tags/asvs/</link>
+      <pubDate>Fri, 04 Apr 2025 00:00:00 +0000</pubDate>
+      <guid>//localhost:1313/tags/asvs/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>OWASP</title>
+      <link>//localhost:1313/tags/owasp/</link>
+      <pubDate>Fri, 04 Apr 2025 00:00:00 +0000</pubDate>
+      <guid>//localhost:1313/tags/owasp/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Introduction</title>
+      <link>//localhost:1313/tags/introduction/</link>
+      <pubDate>Wed, 02 Apr 2025 00:00:00 +0000</pubDate>
+      <guid>//localhost:1313/tags/introduction/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>DevOps REX</title>
+      <link>//localhost:1313/tags/devops-rex/</link>
+      <pubDate>Mon, 31 Mar 2025 00:00:00 +0000</pubDate>
+      <guid>//localhost:1313/tags/devops-rex/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>DevSecOps</title>
+      <link>//localhost:1313/tags/devsecops/</link>
+      <pubDate>Mon, 31 Mar 2025 00:00:00 +0000</pubDate>
+      <guid>//localhost:1313/tags/devsecops/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>IaC Security</title>
+      <link>//localhost:1313/tags/iac-security/</link>
+      <pubDate>Mon, 31 Mar 2025 00:00:00 +0000</pubDate>
+      <guid>//localhost:1313/tags/iac-security/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Infrastructure Security</title>
+      <link>//localhost:1313/tags/infrastructure-security/</link>
+      <pubDate>Thu, 02 Apr 2020 00:00:00 +0000</pubDate>
+      <guid>//localhost:1313/tags/infrastructure-security/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Internet</title>
+      <link>//localhost:1313/tags/internet/</link>
+      <pubDate>Thu, 02 Apr 2020 00:00:00 +0000</pubDate>
+      <guid>//localhost:1313/tags/internet/</guid>
+      <description></description>
+    </item>
+  </channel>
+</rss>

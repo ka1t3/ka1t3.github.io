@@ -1,0 +1,274 @@
+<!DOCTYPE html>
+<html><head lang="en"><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script>
+	<meta charset="utf-8" />
+	<meta http-equiv="X-UA-Compatible" content="IE=edge"><title>Python skills (part 1) - Kite</title><link rel="icon" type="image/png" href=https://img.icons8.com/lollipop/48/cyber-security.png /><meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta name="description" content="The reminder
+A while ago, I was asked this question:
+“Give the number of occurrences of IP addresses in this log file.” You need to count how many times each IP address appears in this txt file.
+Example of file content:
+192.168.1.1 - - [10/Oct/2025:13:55:36 &#43;0200] &#34;GET /index.html HTTP/1.1&#34; 200 532
+10.0.0.14 - - [10/Oct/2025:13:56:01 &#43;0200] &#34;POST /login HTTP/1.1&#34; 403 143
+192.168.1.1 - - [10/Oct/2025:13:56:25 &#43;0200] &#34;GET /favicon.ico HTTP/1.1&#34; 200 324
+172.16.0.7 - - [10/Oct/2025:13:57:00 &#43;0200] &#34;GET /about HTTP/1.1&#34; 404 225
+10.0.0.14 - - [10/Oct/2025:13:57:30 &#43;0200] &#34;GET /profile HTTP/1.1&#34; 200 621
+192.168.1.1 - - [10/Oct/2025:13:58:00 &#43;0200] &#34;GET /contact HTTP/1.1&#34; 200 145
+[]...[]
+172.16.0.8 - - [10/Oct/2025:14:10:00 &#43;0200] &#34;GET /about HTTP/1.1&#34; 404 225
+10.0.0.10 - - [10/Oct/2025:14:10:10 &#43;0200] &#34;GET /profile HTTP/1.1&#34; 200 621
+192.168.1.2 - - [10/Oct/2025:14:10:30 &#43;0200] &#34;GET /contact HTTP/1.1&#34; 200 145
+172.16.0.9 - - [10/Oct/2025:14:10:52 &#43;0200] &#34;GET /support HTTP/1.1&#34; 200 543
+Well, my code was flawed, and i was unable to provide a clean answer." />
+	<meta property="og:image" content="https://raw.githubusercontent.com/athul/archie/master/images/archie-dark.png"/>
+	<meta property="og:url" content="//localhost:1313/posts/python-skills-part-1/">
+  <meta property="og:site_name" content="Kite">
+  <meta property="og:title" content="Python skills (part 1)">
+  <meta property="og:description" content="The reminder A while ago, I was asked this question:
+“Give the number of occurrences of IP addresses in this log file.” You need to count how many times each IP address appears in this txt file.
+Example of file content:
+192.168.1.1 - - [10/Oct/2025:13:55:36 &#43;0200] &#34;GET /index.html HTTP/1.1&#34; 200 532 10.0.0.14 - - [10/Oct/2025:13:56:01 &#43;0200] &#34;POST /login HTTP/1.1&#34; 403 143 192.168.1.1 - - [10/Oct/2025:13:56:25 &#43;0200] &#34;GET /favicon.ico HTTP/1.1&#34; 200 324 172.16.0.7 - - [10/Oct/2025:13:57:00 &#43;0200] &#34;GET /about HTTP/1.1&#34; 404 225 10.0.0.14 - - [10/Oct/2025:13:57:30 &#43;0200] &#34;GET /profile HTTP/1.1&#34; 200 621 192.168.1.1 - - [10/Oct/2025:13:58:00 &#43;0200] &#34;GET /contact HTTP/1.1&#34; 200 145 []...[] 172.16.0.8 - - [10/Oct/2025:14:10:00 &#43;0200] &#34;GET /about HTTP/1.1&#34; 404 225 10.0.0.10 - - [10/Oct/2025:14:10:10 &#43;0200] &#34;GET /profile HTTP/1.1&#34; 200 621 192.168.1.2 - - [10/Oct/2025:14:10:30 &#43;0200] &#34;GET /contact HTTP/1.1&#34; 200 145 172.16.0.9 - - [10/Oct/2025:14:10:52 &#43;0200] &#34;GET /support HTTP/1.1&#34; 200 543 Well, my code was flawed, and i was unable to provide a clean answer.">
+  <meta property="og:locale" content="en_us">
+  <meta property="og:type" content="article">
+    <meta property="article:section" content="posts">
+    <meta property="article:published_time" content="2025-08-26T00:00:00+00:00">
+    <meta property="article:modified_time" content="2025-08-26T00:00:00+00:00">
+    <meta property="article:tag" content="Code">
+    <meta property="article:tag" content="Python">
+
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:title" content="Python skills (part 1)">
+  <meta name="twitter:description" content="The reminder A while ago, I was asked this question:
+“Give the number of occurrences of IP addresses in this log file.” You need to count how many times each IP address appears in this txt file.
+Example of file content:
+192.168.1.1 - - [10/Oct/2025:13:55:36 &#43;0200] &#34;GET /index.html HTTP/1.1&#34; 200 532 10.0.0.14 - - [10/Oct/2025:13:56:01 &#43;0200] &#34;POST /login HTTP/1.1&#34; 403 143 192.168.1.1 - - [10/Oct/2025:13:56:25 &#43;0200] &#34;GET /favicon.ico HTTP/1.1&#34; 200 324 172.16.0.7 - - [10/Oct/2025:13:57:00 &#43;0200] &#34;GET /about HTTP/1.1&#34; 404 225 10.0.0.14 - - [10/Oct/2025:13:57:30 &#43;0200] &#34;GET /profile HTTP/1.1&#34; 200 621 192.168.1.1 - - [10/Oct/2025:13:58:00 &#43;0200] &#34;GET /contact HTTP/1.1&#34; 200 145 []...[] 172.16.0.8 - - [10/Oct/2025:14:10:00 &#43;0200] &#34;GET /about HTTP/1.1&#34; 404 225 10.0.0.10 - - [10/Oct/2025:14:10:10 &#43;0200] &#34;GET /profile HTTP/1.1&#34; 200 621 192.168.1.2 - - [10/Oct/2025:14:10:30 &#43;0200] &#34;GET /contact HTTP/1.1&#34; 200 145 172.16.0.9 - - [10/Oct/2025:14:10:52 &#43;0200] &#34;GET /support HTTP/1.1&#34; 200 543 Well, my code was flawed, and i was unable to provide a clean answer.">
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:ital,wght@1,500&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css2?family=Fira+Sans&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css?family=Roboto+Mono" rel="stylesheet">
+
+	
+	<link rel="stylesheet" type="text/css" media="screen" href="//localhost:1313/css/main.e08e3d47ef734c0d298ed0fb46ed50640341570139eb362f34ac2720f01a4f58.css" />
+		<link id="darkModeStyle" rel="stylesheet" type="text/css" href="//localhost:1313/css/dark.a6ecc2a65313cfac5f20a92af993901cecda7fc68011af46a4c24abe67a922f7.css"  disabled />
+</head>
+<body>
+        <div class="content"><header>
+	<div class="main">
+		<a href="//localhost:1313/">Kite</a>
+	</div>
+	<nav>
+		
+		<a href="/">Home</a>
+		
+		<a href="/posts">All posts</a>
+		
+		<a href="/about">About</a>
+		
+		<a href="/tags">Tags</a>
+		
+		| <span id="dark-mode-toggle" onclick="toggleTheme()"><svg class="feather">
+   <use href="https://unpkg.com/feather-icons@4.29.2/dist/feather-sprite.svg#sun" />
+</svg></span>
+		<script src="//localhost:1313/js/themetoggle.js"></script>
+		
+	</nav>
+</header>
+
+<main>
+  <article>
+    <div class="post-container">
+      
+      <div class="post-content">
+        <div class="title">
+          <h1 class="title">Python skills (part 1)</h1>
+          <div class="meta">Posted on Aug 26, 2025</div>
+        </div>
+        
+        <section class="body">
+          <h2 id="the-reminder">The reminder</h2>
+<p>A while ago, I was asked this question:</p>
+<p>“Give the number of occurrences of IP addresses in this log file.” You need to count how many times each IP address appears in this txt file.</p>
+<p>Example of file content:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-txt" data-lang="txt"><span style="display:flex;"><span>192.168.1.1 - - [10/Oct/2025:13:55:36 +0200] &#34;GET /index.html HTTP/1.1&#34; 200 532
+</span></span><span style="display:flex;"><span>10.0.0.14 - - [10/Oct/2025:13:56:01 +0200] &#34;POST /login HTTP/1.1&#34; 403 143
+</span></span><span style="display:flex;"><span>192.168.1.1 - - [10/Oct/2025:13:56:25 +0200] &#34;GET /favicon.ico HTTP/1.1&#34; 200 324
+</span></span><span style="display:flex;"><span>172.16.0.7 - - [10/Oct/2025:13:57:00 +0200] &#34;GET /about HTTP/1.1&#34; 404 225
+</span></span><span style="display:flex;"><span>10.0.0.14 - - [10/Oct/2025:13:57:30 +0200] &#34;GET /profile HTTP/1.1&#34; 200 621
+</span></span><span style="display:flex;"><span>192.168.1.1 - - [10/Oct/2025:13:58:00 +0200] &#34;GET /contact HTTP/1.1&#34; 200 145
+</span></span><span style="display:flex;"><span>[]...[]
+</span></span><span style="display:flex;"><span>172.16.0.8 - - [10/Oct/2025:14:10:00 +0200] &#34;GET /about HTTP/1.1&#34; 404 225
+</span></span><span style="display:flex;"><span>10.0.0.10 - - [10/Oct/2025:14:10:10 +0200] &#34;GET /profile HTTP/1.1&#34; 200 621
+</span></span><span style="display:flex;"><span>192.168.1.2 - - [10/Oct/2025:14:10:30 +0200] &#34;GET /contact HTTP/1.1&#34; 200 145
+</span></span><span style="display:flex;"><span>172.16.0.9 - - [10/Oct/2025:14:10:52 +0200] &#34;GET /support HTTP/1.1&#34; 200 543
+</span></span></code></pre></div><p>Well, my code was flawed, and i was unable to provide a clean answer.</p>
+<p>That&rsquo;s when I realized I needed to brush up on my development basics. (I had forgotten and, more importantly, lost a lot of muscle memory&hellip;).
+In another article, I&rsquo;ll talk about how i got into application security and, above all, what my role as Lead Application Security entails in a company with over 350,000 employees and more than 1,000 projects. But it&rsquo;s clear that I&rsquo;ve moved away from development to focus more on AppSec strategy.</p>
+<p>So here we go, it&rsquo;s time to rebuild my skills with the goal of developing as many skills as possible in security automation. Below is a link to a Github repo that contains all my notes on the courses i&rsquo;m followed so that you can practice too.</p>
+<p>The link : <a href="https://github.com/ka1t3/Python.git">https://github.com/ka1t3/Python.git</a></p>
+<p>As for the question from earlier, below is a solution from Gemini 2.5 pro:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-Python" data-lang="Python"><span style="display:flex;"><span><span style="color:#f92672">import</span> re
+</span></span><span style="display:flex;"><span><span style="color:#f92672">from</span> collections <span style="color:#f92672">import</span> Counter
+</span></span><span style="display:flex;"><span><span style="color:#f92672">import</span> os
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">def</span> <span style="color:#a6e22e">count_ip_occurrences</span>(log_file_path):
+</span></span><span style="display:flex;"><span>    <span style="color:#e6db74">&#34;&#34;&#34;
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">    Analyze a log file to count the occurrences of each IP address.
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">    Args:
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">        log_file_path (str): Path to the log file.
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">    Returns:
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">        collections.Counter: A Counter object containing the IPs and their counts,
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">                             or None if the file is not found.
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">    &#34;&#34;&#34;</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#75715e"># 1. Check if the log file exists before proceeding</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">if</span> <span style="color:#f92672">not</span> os<span style="color:#f92672">.</span>path<span style="color:#f92672">.</span>exists(log_file_path):
+</span></span><span style="display:flex;"><span>        print(<span style="color:#e6db74">f</span><span style="color:#e6db74">&#34;Error: The file &#39;</span><span style="color:#e6db74">{</span>log_file_path<span style="color:#e6db74">}</span><span style="color:#e6db74">&#39; was not found.&#34;</span>)
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">return</span> <span style="color:#66d9ef">None</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    <span style="color:#75715e"># 2. Define the regular expression (regex) to extract IP addresses (IPv4 format)</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#75715e">#    - \b ensures that we capture a whole word (prevents matching part of a longer number)</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#75715e">#    - (?:...) is a non-capturing group</span>
+</span></span><span style="display:flex;"><span>    ip_pattern <span style="color:#f92672">=</span> re<span style="color:#f92672">.</span>compile(<span style="color:#e6db74">r</span><span style="color:#e6db74">&#39;\b(?:[0-9]{1,3}\.)</span><span style="color:#e6db74">{3}</span><span style="color:#e6db74">[0-9]{1,3}\b&#39;</span>)
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">try</span>:
+</span></span><span style="display:flex;"><span>        <span style="color:#75715e"># 3. Read the file and find all matches</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">with</span> open(log_file_path, <span style="color:#e6db74">&#39;r&#39;</span>, encoding<span style="color:#f92672">=</span><span style="color:#e6db74">&#39;utf-8&#39;</span>) <span style="color:#66d9ef">as</span> file:
+</span></span><span style="display:flex;"><span>            <span style="color:#75715e"># Read the entire content at once for global searching</span>
+</span></span><span style="display:flex;"><span>            content <span style="color:#f92672">=</span> file<span style="color:#f92672">.</span>read()
+</span></span><span style="display:flex;"><span>            <span style="color:#75715e"># re.findall returns a list of all strings that match the pattern</span>
+</span></span><span style="display:flex;"><span>            ip_list <span style="color:#f92672">=</span> ip_pattern<span style="color:#f92672">.</span>findall(content)
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>        <span style="color:#75715e"># 4. Use collections.Counter to count the list elements</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#75715e">#    This is the simplest and most efficient method for this task.</span>
+</span></span><span style="display:flex;"><span>        ip_counts <span style="color:#f92672">=</span> Counter(ip_list)
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">return</span> ip_counts
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">except</span> <span style="color:#a6e22e">Exception</span> <span style="color:#66d9ef">as</span> e:
+</span></span><span style="display:flex;"><span>        print(<span style="color:#e6db74">f</span><span style="color:#e6db74">&#34;An error occurred while reading or processing the file: </span><span style="color:#e6db74">{</span>e<span style="color:#e6db74">}</span><span style="color:#e6db74">&#34;</span>)
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">return</span> <span style="color:#66d9ef">None</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># --- Script entry point ---</span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">if</span> __name__ <span style="color:#f92672">==</span> <span style="color:#e6db74">&#34;__main__&#34;</span>:
+</span></span><span style="display:flex;"><span>    <span style="color:#75715e"># Name of the file containing the logs.</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#75715e"># Make sure this file is in the same folder as the Python script,</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#75715e"># or provide a full path (e.g., &#34;C:/Users/YourName/Documents/logs.txt&#34;).</span>
+</span></span><span style="display:flex;"><span>    LOG_FILE <span style="color:#f92672">=</span> <span style="color:#e6db74">&#39;apache_logs.txt&#39;</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    <span style="color:#75715e"># Call the main function</span>
+</span></span><span style="display:flex;"><span>    ip_occurrences <span style="color:#f92672">=</span> count_ip_occurrences(LOG_FILE)
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    <span style="color:#75715e"># 5. Display the results clearly</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">if</span> ip_occurrences:
+</span></span><span style="display:flex;"><span>        print(<span style="color:#e6db74">f</span><span style="color:#e6db74">&#34;Analysis of the file &#39;</span><span style="color:#e6db74">{</span>LOG_FILE<span style="color:#e6db74">}</span><span style="color:#e6db74">&#39; completed.&#34;</span>)
+</span></span><span style="display:flex;"><span>        print(<span style="color:#e6db74">&#34;Number of occurrences for each IP address:&#34;</span>)
+</span></span><span style="display:flex;"><span>        
+</span></span><span style="display:flex;"><span>        <span style="color:#75715e"># The .most_common() method sorts results from most to least frequent.</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">for</span> ip, count <span style="color:#f92672">in</span> ip_occurrences<span style="color:#f92672">.</span>most_common():
+</span></span><span style="display:flex;"><span>            print(<span style="color:#e6db74">f</span><span style="color:#e6db74">&#34;- </span><span style="color:#e6db74">{</span>ip<span style="color:#e6db74">}</span><span style="color:#e6db74">: </span><span style="color:#e6db74">{</span>count<span style="color:#e6db74">}</span><span style="color:#e6db74"> times&#34;</span>)
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">else</span>:
+</span></span><span style="display:flex;"><span>        print(<span style="color:#e6db74">&#34;No results to display due to an error or empty file.&#34;</span>)
+</span></span></code></pre></div><p>But there are slew of ways to do this, so try them out and have some fun.</p>
+<p><strong>My alternative suggestion</strong>
+Add a line ip,timestamp,method,url,status,size and change the file extension to .csv to answer the question with pandas.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-Python" data-lang="Python"><span style="display:flex;"><span><span style="color:#f92672">import</span> pandas <span style="color:#66d9ef">as</span> pd
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># Define count_entries()</span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">def</span> <span style="color:#a6e22e">count_entries</span>(csv_file, c_size, colname):
+</span></span><span style="display:flex;"><span>    <span style="color:#e6db74">&#34;&#34;&#34;Return a dictionary with counts of
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">    occurrences as value for each key.&#34;&#34;&#34;</span>
+</span></span><span style="display:flex;"><span>    
+</span></span><span style="display:flex;"><span>    <span style="color:#75715e"># Initialize an empty dictionary: counts_dict</span>
+</span></span><span style="display:flex;"><span>    counts_dict <span style="color:#f92672">=</span> {}
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    <span style="color:#75715e"># Iterate over the file chunk by chunk (but not necessary for a small file)</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">for</span> chunk <span style="color:#f92672">in</span> pd<span style="color:#f92672">.</span>read_csv(csv_file, chunksize<span style="color:#f92672">=</span>c_size):
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>        <span style="color:#75715e"># Iterate over the column in DataFrame</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">for</span> entry <span style="color:#f92672">in</span> chunk[colname]:
+</span></span><span style="display:flex;"><span>            <span style="color:#66d9ef">if</span> entry <span style="color:#f92672">in</span> counts_dict<span style="color:#f92672">.</span>keys():
+</span></span><span style="display:flex;"><span>                counts_dict[entry] <span style="color:#f92672">+=</span> <span style="color:#ae81ff">1</span>
+</span></span><span style="display:flex;"><span>            <span style="color:#66d9ef">else</span>:
+</span></span><span style="display:flex;"><span>                counts_dict[entry] <span style="color:#f92672">=</span> <span style="color:#ae81ff">1</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    <span style="color:#75715e"># Return counts_dict</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">return</span> counts_dict
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># Call count_entries(): result_counts</span>
+</span></span><span style="display:flex;"><span>result_counts <span style="color:#f92672">=</span> count_entries(<span style="color:#e6db74">&#39;logs.csv&#39;</span>, <span style="color:#ae81ff">10</span>, <span style="color:#e6db74">&#39;lang&#39;</span>)
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># Print result_counts</span>
+</span></span><span style="display:flex;"><span>print(result_counts)
+</span></span></code></pre></div><h2 id="the-wod--practice">The wod / practice</h2>
+<p>You will find slightly more advanced concepts on certain topics in my notes.
+Personally, to avoid forgetting (again&hellip;) and getting confused, there is nothing better than practice.
+I break it down into two parts: a review of the fundamentals (spaced repetition principle), then I carry out projects in parallel to reinforce this knowledge.
+I will write a specific blog post about the project I am currently working on (when I can find the time between my work, my children, my hobbies, and preparing for my certifications).</p>
+<p>Overall, the internet is full of great content for building a solid foundation.
+For a completely free version, you can take these courses, which are a great place to start:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-fallback" data-lang="fallback"><span style="display:flex;"><span>├── Calmcode : https://calmcode.io/ 
+</span></span><span style="display:flex;"><span>├── Futurecoder : https://futurecoder.io/
+</span></span><span style="display:flex;"><span>├── Automate boring stuff with Python : https://automatetheboringstuff.com/
+</span></span></code></pre></div><p>For reviewing the fundamentals, i use this simple method (although it’s not the most suitable if the GitHub repo gets updated): load the file into an AI (I use a free plan i got with Perplexity) and ask it to propose exercises for you.</p>
+<p><strong>Example of prompt</strong></p>
+<p>Context:</p>
+<ul>
+<li>I have a Python code file that i will provide. This file contains [e.g., a class, utility functions, a script, etc.]. My goal is to learn and improve in Python by practicing directly on this code.</li>
+</ul>
+<p>Request:</p>
+<ul>
+<li>Propose a series of progressive, practical exercises (between 5 and 10) directly related to the content of the file. The exercises should help me better understand, modify, and improve the provided code.</li>
+</ul>
+<p>Output format:</p>
+<ul>
+<li>Numbered list of exercises.</li>
+<li>Each exercise should be written as a clear instruction (e.g., “Add a function that…”, “Modify the class to…”).</li>
+<li>Indicate the difficulty level for each exercise (Beginner, Intermediate, Advanced).</li>
+<li>Provide an expected learning objective (e.g., “Understand inheritance”, “Practice loops”, “Handle files”).</li>
+</ul>
+<p>What you should not do:</p>
+<ul>
+<li>Do not provide the solutions or corrected code directly.</li>
+<li>Do not suggest exercises unrelated to the provided file.</li>
+<li>Do not be too vague (each exercise must be actionable).</li>
+<li>Do not propose tasks that are impossible or unsuitable for the current code level.</li>
+</ul>
+<p>Another method is to use Gitinjest <a href="https://gitingest.com/">Gitinjest</a> to better feed your LLM and therefore interact more effectively with the code.</p>
+<p>A bientôt !</p>
+
+        </section>
+        <div class="post-tags">
+          
+          
+          <nav class="nav tags">
+            <ul class="tags">
+              
+              <li><a href="/tags/code">Code</a></li>
+              
+              <li><a href="/tags/python">Python</a></li>
+              
+            </ul>
+          </nav>
+          
+          
+        </div>
+      </div>
+
+      
+      
+    </div>
+
+    </article>
+</main>
+<footer>
+  <div style="display:flex"><a class="soc" href="https://github.com/ka1t3/ka1t3.github.io" rel="me" title="GitHub"><svg class="feather">
+   <use href="/svg/feather-sprite.51cf5647cb1987f769b616558f2620fd9423d72058490231b391bf6aa3744b55.svg#github" />
+</svg></a><a class="border"></a><a class="soc" href="www.linkedin.com/in/anohable" rel="me" title="linkedin"><svg class="feather">
+   <use href="/svg/feather-sprite.51cf5647cb1987f769b616558f2620fd9423d72058490231b391bf6aa3744b55.svg#linkedin" />
+</svg></a><a class="border"></a></div>
+  <div class="footer-info">
+    2025  © Kite |  <a
+      href="https://github.com/athul/archie">Archie Theme</a> | Built with <a href="https://gohugo.io">Hugo</a>
+  </div>
+</footer>
+
+</div>
+    </body>
+</html>
