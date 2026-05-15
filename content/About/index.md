@@ -24,9 +24,9 @@ This unique blend of academic rigor and industry experience has shaped my approa
 - CI/CD: GitLab CI/CD, GitHub Actions, Jenkins
 
 **Cloud & Infrastructure:**
-- Cloud Platforms: Google Cloud Platform, AWS, Azure
+- Cloud Platforms:  AWS
 - Database: SQLite
-- Containerization: Docker, Kubernetes
+- Containerization: Docker
 
 **Other Skills:**
 - Git, DevOps, Test-Driven Development
@@ -35,8 +35,8 @@ This unique blend of academic rigor and industry experience has shaped my approa
 ## Strategic Expertise 🎯
 - Risk Assessment
 - Compliance (ISO 27001, GDPR)
-- Application Security
-- Cloud Security Architecture
+- EBIOS RM
+- Security Awareness Training (labs Security Champion on SAST, SCA tools)
 
 ## Professional Certifications 🏆
 **Security & Risk Management:**
@@ -58,7 +58,7 @@ This unique blend of academic rigor and industry experience has shaped my approa
 ## Education 🎓
 - **Master in Computer Science** - Paris Dauphine University, France (2018)
 - **Master in Environmental Science** - Paris Cité University, France (2017)
-- **Bachelor in Physics and Chemistry** - Paris Sorbonne Paris Nord University, France (2015)
+- **Bachelor in Physics and Chemistry** - Sorbonne Paris Nord University, France (2015)
 
 ## Languages & International Experience 🌍
 - **French:** Native speaker 🇫🇷
